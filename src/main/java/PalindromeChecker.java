@@ -41,7 +41,7 @@ String s = "";
   for(int i = word.length(); i > 0; i--)
     s = s + word.substring(i-1, i);
   
-  if(Word.equals(s))
+  if(word.equals(s))
     return true;
   return false;
 }
@@ -50,7 +50,7 @@ public String reverse(String str)
   str.toLowerCase();
     String sNew = new String();
   for(int i = str.length(); i > 0; i--)
-     if(!sWord.substring(i,i+1).equals(" "))
+     if(!str.substring(i,i+1).equals(" "))
       sNew = s + str.substring(i, i+1);
     return sNew;
 }
