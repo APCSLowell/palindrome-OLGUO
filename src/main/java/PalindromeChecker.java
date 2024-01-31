@@ -39,7 +39,7 @@ public boolean palindrome(String word)
 {
 String s = ""; 
   for(int i = Word.length(); i > 0; i--)
-  s = s + Word.substring(i-1, i);
+    s = s + Word.substring(i-1, i);
   
   if(Word.equals(s))
     return true;
@@ -47,9 +47,12 @@ String s = "";
 }
 public String reverse(String str)
 {
+  str.toLowerCase();
     String sNew = new String();
   for(int i = str.length(); i > 0; i--)
-    s = s + str.substring(i-1,i);
+     if(!sWord.substring(i,i+1).equals(" "))
+      sNew = s + sWord.substring(i, i+1);
+    sNew = sNew + str.substring(i-1,i);
     return sNew;
 }
 }
