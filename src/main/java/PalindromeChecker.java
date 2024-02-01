@@ -37,24 +37,35 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-String s = ""; 
-  for(int i = word.length(); i > 0; i--)
-    s = s + word.substring(i-1, i);
-  
-  if(word.equals(s))
-    return true;
+if(noPunctuation(onlyLetter(noSpaces(word.toLowerCase()))).equals(noSpace(reverse(noPunctuation(onlyLetter(word.toLowerCase()))))) == true)
+  return true;
   return false;
 }
 public String reverse(String str)
 {
-  str.equals(str.toLowerCase());
-    String sNew = new String();
-  for(int i = str.length(); i > 0; i--)
-     if(!str.substring(i,i+1).equals(" "))
-      sNew = sNew + str.substring(i, i+1);
+String sNew = new String();
   for(int i = 0; i < str.length(); i++)
-    if(Character.isLetter(str.charAt(i)))
-      sNew = sNew + str.charAt(i);
-    return sNew;
+    if(str.substring(i, i+1).equals(" ") != true)
+      s+= str.substring(i, i+1)
+
+    return s;
 }
+
+public String noPunctuation(String c)
+  {
+  String s = new String();
+    for(int i = 0; i < c.length(); i++)
+      if(c.substring(i, i+ 1).equals("." == false && c.substring(i, i+1).equals(",") == false)
+          s+= c.substring(i, i+1)
+
+      return s;
+}
+  public String onlyLetter(String f)
+  {
+    String cheese = "";
+      for(int i = 0; i < f.length(); i++)
+          if(character.isLetter(f.charAt(i)) == true)
+              cheese += f.substring(i, i+1)
+
+        return cheese;
 }
